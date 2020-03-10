@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import Swal from 'sweetalert2'
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,15 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'app-angular9';
+
+  verSweetalert(){
+    Swal.fire({
+      allowOutsideClick: false,
+      icon: 'success',
+      title: 'Configuracion correcta',
+      text: 'Excelente procediste con todo bien configurado',
+    })
+  }
 }
+
+
