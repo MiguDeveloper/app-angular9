@@ -9,6 +9,7 @@ import Swal from 'sweetalert2'
 export class AppComponent {
   title = 'app-angular9';
 
+  // Metodo del sweer alert
   verSweetalert(){
     Swal.fire({
       allowOutsideClick: false,
