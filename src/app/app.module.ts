@@ -1,8 +1,11 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import {BrowserModule} from '@angular/platform-browser';
+import {NgModule} from '@angular/core';
 
-import { AppComponent } from './app.component';
-import { PrimerTestComponent } from './components/primer-test/primer-test.component';
+import {AppComponent} from './app.component';
+import {PrimerTestComponent} from './components/primer-test/primer-test.component';
+import {APP_ROUTING} from './app.routes';
+import {UsuariosService} from './services/usuarios.service';
+import {HttpClientModule} from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -10,9 +13,14 @@ import { PrimerTestComponent } from './components/primer-test/primer-test.compon
     PrimerTestComponent
   ],
   imports: [
-    BrowserModule
+    APP_ROUTING,
+    BrowserModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [
+    UsuariosService
+  ],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+}
